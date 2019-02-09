@@ -20,7 +20,7 @@ github:
   repo:           https://github.com/poole/hyde
 
 gems: [jekyll-paginate]
-gems: [Jekyll-gist]
+
 paginate_path: "page:num"
 
 pages_list:       
