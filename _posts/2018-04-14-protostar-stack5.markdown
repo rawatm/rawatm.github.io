@@ -219,6 +219,7 @@ atop the code. Something to do with make stack section writable as mentioned her
 nasm -felf get_shell.asm
 ld -melf_i386 -o get_shell get_shell.o
 ./get_shell
+{% endhighlight %}
 So we get a shell now.
 We need to get shell code as hex. Using objdump and regex dump from my SE course
 {% highlight shell_session %}
