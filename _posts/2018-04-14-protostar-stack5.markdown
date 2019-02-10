@@ -2,7 +2,7 @@
 layout: post
 title:  "Protostar stack5 challenge"
 date:   2018-04-14 23:37:36 +0530
-categories: security protostar
+categories: exploit-exercises protostar stack5
 ---
 
 
