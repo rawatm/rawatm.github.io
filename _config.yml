@@ -1,34 +1,29 @@
-# Dependencies
-markdown:         kramdown
-highlighter:      rouge
-
 # Permalinks
-permalink:        pretty
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+
 
 # Setup
-title:            rawatm blog
-tagline:          'IT & Software'
-baseurl:          "/rawatm.github.io/"
+title:               Madhur Rawat
+tagline:             'Software & security'
+description:         'Software engineer currently working in area of linux kernel, ARM AARCHv8 architecture.'
+url:                 https://github.com/rawatm
+baseurl:             '/rawatm.github.io/'
+paginate:            5
 
-paginate:         5
-
+# About/contact
 author:
-  name:           'Madhur Rawat'
-  url:            https://github.com/rawatm
+  name:              Madhur Rawat
+  url:               https://github.com/rawatm
+  email:             madhur0311@gmail.com
 
-paginate:         5
+# Custom vars
+version:             1.0.0
 
 plugins: [jekyll-paginate]
-
-paginate_path: "page:num"
 
 pages_list:
   About: '/about'
   Archive: '/archive'
   Feed: '/atom.xml'
-
-# Custom vars
-version:          2.0.0
-
-github:
-  repo:           https://github.com/rawatm
