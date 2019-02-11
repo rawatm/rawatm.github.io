@@ -9,7 +9,7 @@ title:               Madhur Rawat
 tagline:             'Software & security'
 description:         'Software engineer currently working in area of linux kernel, ARM AARCHv8 architecture.'
 url:                 https://github.com/rawatm
-baseurl:             '/rawatm.github.io/'
+baseurl:             ''
 paginate:            5
 
 # About/contact
